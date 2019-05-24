@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>br.com.quake</groupId>
-	<artifactId>log-analyze</artifactId>
-	<version>1.0</version>
-	<name>log-analyze</name>
+  <groupId>br.com.quake</groupId>
+  <artifactId>log-analyze</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0</version>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
-		<relativePath />
-	</parent>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.5.RELEASE</version>
+    <relativePath/>
+  </parent>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>11</java.version>
-		<lombok.version>1.18.6</lombok.version>
-		<spring-boot.version>2.1.5.RELEASE</spring-boot.version>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>11</java.version>
+    <lombok.version>1.18.6</lombok.version>
+    <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
+  </properties>
 
-	<modules>
-		<module>app</module>
-        <module>domain</module>
-    </modules>
+  <modules>
+    <module>app</module>
+    <module>domain</module>
+  </modules>
 
 
 </project>
