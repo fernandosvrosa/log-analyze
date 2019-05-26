@@ -1,5 +1,0 @@
-spring:
-  data:
-    mongodb:
-      uri: mongodb://root:admin@localhost:27017/?authMechanism=SCRAM-SHA-1
-      database: swapi
