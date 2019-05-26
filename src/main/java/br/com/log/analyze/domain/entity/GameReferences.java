@@ -1,4 +1,4 @@
-	package br.com.log.analyze.domain.usecase;
+	package br.com.log.analyze.domain.entity;
 
 import java.util.regex.Pattern;
 

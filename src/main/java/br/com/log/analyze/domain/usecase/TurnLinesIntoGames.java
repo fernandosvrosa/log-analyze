@@ -1,6 +1,7 @@
 package br.com.log.analyze.domain.usecase;
 
 import br.com.log.analyze.domain.entity.GameLine;
+import br.com.log.analyze.domain.entity.GameReferences;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
