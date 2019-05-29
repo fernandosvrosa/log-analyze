@@ -18,11 +18,18 @@ public class StartAnalyse {
 
   private final TurnLinesIntoGames turnLinesIntoGames;
 
+  private final GameLineToGame gameLineToGame;
+
   public Mono<Analyse> execute(String fileName) {
 
     var lines = readFileDataProvider.getLines(fileName);
 
     var gameLines = turnLinesIntoGames.execute(lines);
+
+
+    var games = gameLineToGame.execute(gameLines);
+
+    // Persiste games mongoDB
 
     return null;
 

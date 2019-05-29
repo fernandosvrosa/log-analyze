@@ -14,6 +14,10 @@ import java.util.regex.Pattern;
 
     public static final String WORLD_KILLER_ID = "1022";
 
+    public static final String PLAYER_KILLER = "^([\\w/]+\\s[\\w:]+) (-) ([\\w]+) (killed) ([\\w]+) (by) ([\\w]+)";
+
+    public static final String  MACHINE_KILLER = "^([\\w/]+\\s[\\w:]+) (-) (<WORLD>) (killed) ([\\w]+) (by) ([\\w]+)";
+
 
     public static Pattern buildLinePatternFor(final String value) {
       return Pattern.compile(TIME_PATTERN + "\\s(" + value + ":)(.*?)");
