@@ -13,9 +13,9 @@ import org.springframework.stereotype.Component;
 public class TurnLinesIntoGames {
 
   public List<GameLine> execute(Stream<String> lines) {
-    List<GameLine> games = new ArrayList<>();
-    AtomicInteger matches = new AtomicInteger();
-    AtomicReference<GameLine> game = new AtomicReference<>(new GameLine());
+    var games = new ArrayList<GameLine>();
+    var matches = new AtomicInteger();
+    var game = new AtomicReference<>(new GameLine());
 
     lines.forEach(line -> {
 

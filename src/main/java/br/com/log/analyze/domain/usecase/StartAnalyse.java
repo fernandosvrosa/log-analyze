@@ -20,9 +20,9 @@ public class StartAnalyse {
 
   public Mono<Analyse> execute(String fileName) {
 
-    Stream<String> lines = readFileDataProvider.getLines(fileName);
+    var lines = readFileDataProvider.getLines(fileName);
 
-    List<GameLine> gameLines = turnLinesIntoGames.execute(lines);
+    var gameLines = turnLinesIntoGames.execute(lines);
 
     return null;
 

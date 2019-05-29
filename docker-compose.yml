@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  log-analyze:
+    build: .
+    restart: always
+    container_name: log-analyze
+    ports:
+      - 8080:8080
+    working_dir: /
+    depends_on:
+      - log-analyze-mongo
+
+  log-analyze-mongo:
+    image: mongo
+    container_name: log-analyze-mongo
+    hostname: log-analyze-mongo
+    volumes:
+      - $HOME/data/log-analyze-mongo-data:/data/db
+      - $HOME/data/log-analyze-mongo-bkp:/data/bkp
+    restart: always

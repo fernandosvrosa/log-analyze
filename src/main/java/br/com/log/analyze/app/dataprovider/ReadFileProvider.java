@@ -22,7 +22,7 @@ public class ReadFileProvider implements ReadFileDataProvider {
   @Override
   public Stream<String> getLines(final String fileName) {
     Stream<String> lines = null;
-    Path path = Paths.get(fileBase.getPath(), fileName);
+    var path = Paths.get(fileBase.getPath(), fileName);
     try {
       lines = Files.lines(path, StandardCharsets.UTF_8);
 
