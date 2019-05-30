@@ -1,16 +1,38 @@
 package br.com.log.analyze.domain.entity;
 
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import lombok.Builder;
 import lombok.Data;
 
+@Builder
 @Data
 public class Game {
 
-  private final String name;
+  private  String name;
 
-  private final List<Player> players;
+  private Integer totalKills;
 
-  private final Map<String, Integer> kills;
+  private  Set<Player> players;
+
+  private  Map<String, Integer> kills;
+
+
+  public void addPlayers (String name){
+    Player player = new Player(name);
+    players.add(player);
+  }
+
+  public void addKillPlayer(String name){
+    Integer kill = kills.get(name);
+    kills.put(name, kill + 1);
+    totalKills +=1;
+  }
+
+  public void removeKillPlayer(String name){
+    Integer kill = kills.get(name);
+    kills.put(name, kill - 1);
+    totalKills +=1;
+  }
 
 }

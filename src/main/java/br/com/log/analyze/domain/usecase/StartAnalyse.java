@@ -26,8 +26,11 @@ public class StartAnalyse {
 
     var gameLines = turnLinesIntoGames.execute(lines);
 
+    gameLines.forEach(System.out::println);
 
     var games = gameLineToGame.execute(gameLines);
+
+    games.forEach(System.out::println);
 
     // Persiste games mongoDB
 

@@ -6,10 +6,12 @@ import br.com.log.analyze.domain.usecase.StartAnalyse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor
-@Component
+@RestController
 public class AnalyZeController {
 
 
@@ -17,7 +19,7 @@ public class AnalyZeController {
 
 
   @PostMapping("/analyze")
-  public Mono<Analyse> analyze(AnalyzeRequest request) {
+  public Mono<Analyse> analyze(@RequestBody AnalyzeRequest request) {
     return startAnalyse.execute(request.getName());
   }
 

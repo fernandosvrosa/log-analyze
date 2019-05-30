@@ -10,13 +10,9 @@ import java.util.regex.Pattern;
 
     public static final String CLIENT_USER_INFO_PATTERN = "ClientUserinfoChanged";
 
-    public static final String KILL_INFO_PATTERN = "Kill";
-
-    public static final String WORLD_KILLER_ID = "1022";
-
     public static final String PLAYER_KILLER = "^([\\w/]+\\s[\\w:]+) (-) ([\\w]+) (killed) ([\\w]+) (by) ([\\w]+)";
 
-    public static final String  MACHINE_KILLER = "^([\\w/]+\\s[\\w:]+) (-) (<WORLD>) (killed) ([\\w]+) (by) ([\\w]+)";
+    public static final String  WORLD_KILLER = "^([\\w/]+\\s[\\w:]+) (-) (<world>) (killed) ([\\w]+) (by) ([\\w]+)";
 
 
     public static Pattern buildLinePatternFor(final String value) {

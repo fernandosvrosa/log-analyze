@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://log-analyze-mongo:27017/log-analyze
+
+
+file:
+  path: "/opt/log"
