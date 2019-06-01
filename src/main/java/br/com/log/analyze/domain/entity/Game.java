@@ -25,12 +25,14 @@ public class Game {
 
   public void addKillPlayer(String name){
     Integer kill = kills.get(name);
+    kill = kill != null ? kill : 0;
     kills.put(name, kill + 1);
     totalKills +=1;
   }
 
   public void removeKillPlayer(String name){
     Integer kill = kills.get(name);
+    kill = kill != null ? kill : 0;
     kills.put(name, kill - 1);
     totalKills +=1;
   }

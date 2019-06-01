@@ -4,6 +4,8 @@ package br.com.log.analyze.domain.usecase;
 import br.com.log.analyze.domain.entity.Game;
 import br.com.log.analyze.domain.entity.GameLine;
 import br.com.log.analyze.domain.usecase.parser.ParserGame;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +30,8 @@ public class GameLineToGame {
 
   @Synchronized
   private Game linesToGame(String gameName, List<String> lines) {
-    Game game = Game.builder().name(gameName).build();
+    Game game = Game.builder().name(gameName).totalKills(0).players(new HashSet<>())
+        .kills(new HashMap<>()).build();
     lines.forEach(line -> toGame(line, game));
     return game;
 
@@ -36,7 +39,7 @@ public class GameLineToGame {
   }
 
 
-  public void toGame(String line, Game game) {
+  private void toGame(String line, Game game) {
     parserGames.stream().filter(parserGame -> parserGame.isThisLine(line))
         .findFirst()
         .orElse(null)
