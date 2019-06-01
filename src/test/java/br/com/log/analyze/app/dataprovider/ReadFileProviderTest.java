@@ -6,6 +6,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import br.com.log.analyze.app.dataprovider.exception.FileNotFoundException;
+import br.com.log.analyze.app.dataprovider.io.FilePathProperties;
+import br.com.log.analyze.app.dataprovider.io.ReadFileProvider;
 import java.util.stream.Stream;
 import org.junit.Test;
 

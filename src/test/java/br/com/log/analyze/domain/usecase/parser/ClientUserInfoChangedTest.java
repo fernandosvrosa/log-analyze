@@ -40,6 +40,7 @@ public class ClientUserInfoChangedTest {
     assertEquals(1, result.getPlayers().size());
     assertTrue(result.getPlayers().stream().filter(player -> playerAssert.equals(player.getName()))
         .findFirst().isPresent());
+    assertTrue(result.getKills().get(playerAssert) != null);
 
   }
 

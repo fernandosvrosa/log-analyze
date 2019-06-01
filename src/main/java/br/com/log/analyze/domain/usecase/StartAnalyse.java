@@ -1,7 +1,9 @@
 package br.com.log.analyze.domain.usecase;
 
+import br.com.log.analyze.domain.dataprovider.GamePersistenceDataProvider;
 import br.com.log.analyze.domain.dataprovider.ReadFileDataProvider;
-import br.com.log.analyze.domain.entity.Analyse;
+import br.com.log.analyze.domain.entity.GameResult;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -12,25 +14,22 @@ public class StartAnalyse {
 
   private final ReadFileDataProvider readFileDataProvider;
 
+  private final GamePersistenceDataProvider gamePersistenceDataProvider;
+
   private final TurnLinesIntoGames turnLinesIntoGames;
 
   private final GameLineToGame gameLineToGame;
 
-  public Mono<Analyse> execute(String fileName) {
+  public Mono<GameResult> execute(String fileName) {
 
     var lines = readFileDataProvider.getLines(fileName);
 
     var gameLines = turnLinesIntoGames.execute(lines);
 
-    gameLines.forEach(System.out::println);
-
     var games = gameLineToGame.execute(gameLines);
 
-    games.forEach(System.out::println);
-
-    // Persiste games mongoDB
-
-    return null;
+    return gamePersistenceDataProvider
+        .save(GameResult.builder().id(UUID.randomUUID().toString()).games(games).build());
 
   }
 

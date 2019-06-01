@@ -1,4 +1,4 @@
-package br.com.log.analyze.app.dataprovider;
+package br.com.log.analyze.app.dataprovider.io;
 
 import lombok.Getter;
 import lombok.Setter;
