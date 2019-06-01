@@ -1,6 +1,8 @@
 package br.com.log.analyze.domain.usecase.parser;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import br.com.log.analyze.domain.entity.Game;
 import java.util.HashMap;

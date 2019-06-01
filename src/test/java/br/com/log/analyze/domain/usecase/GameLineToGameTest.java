@@ -1,6 +1,6 @@
 package br.com.log.analyze.domain.usecase;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import br.com.log.analyze.domain.entity.Game;
 import br.com.log.analyze.domain.entity.GameLine;

@@ -1,12 +1,8 @@
 package br.com.log.analyze.domain.usecase;
 
-import br.com.log.analyze.domain.entity.Analyse;
-import br.com.log.analyze.domain.entity.GameLine;
 import br.com.log.analyze.domain.dataprovider.ReadFileDataProvider;
-import java.util.List;
-import java.util.stream.Stream;
+import br.com.log.analyze.domain.entity.Analyse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
