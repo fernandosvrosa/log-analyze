@@ -29,7 +29,7 @@ public class AnalyZeController {
 
 
   @GetMapping("/analyze/{id}")
-  public Mono<GameResult> analyze(@PathVariable String id) {
+  public Mono<GameResult> getGameResult(@PathVariable String id) {
     return gameModelRepository.findById(id);
   }
 
