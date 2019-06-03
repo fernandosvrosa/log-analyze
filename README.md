@@ -24,12 +24,12 @@ Log analyze é uma api para analise de log do jogo [Quake](https://quake.bethesd
  
  ## Usando a analise e a consulta 
  colocar o arquivo de log na pasta /opt/log da maquina, pois esta compartilhado com o docker do projeto, usar o endpoint POST  como no exemplo abaixo
- ######POST-> /analyse
+ POST-> /analyse
  body 
  `` {"name": "test.log"}``
  
  usar o endpoint com o id retornado no post par aconsultar
-######GET-> /analyse/{id}
+GET-> /analyse/{id}
 
 
  
